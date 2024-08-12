@@ -1,0 +1,6 @@
+@NWTrackerAPI_HostAddress = http://localhost:5063
+
+GET {{NWTrackerAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

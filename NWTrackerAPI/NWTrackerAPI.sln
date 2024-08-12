@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWTrackerAPI", "NWTrackerAPI.csproj", "{49E445B3-D2EB-4437-A9BD-807EF1D643BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49E445B3-D2EB-4437-A9BD-807EF1D643BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49E445B3-D2EB-4437-A9BD-807EF1D643BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49E445B3-D2EB-4437-A9BD-807EF1D643BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49E445B3-D2EB-4437-A9BD-807EF1D643BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {111B2B67-050A-40D5-A980-D2CD265B6EF6}
+	EndGlobalSection
+EndGlobal

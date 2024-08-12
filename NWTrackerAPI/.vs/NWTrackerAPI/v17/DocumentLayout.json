@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\NWTrackerAPI\\NWTrackerAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|d:\\nwtrackerapi\\nwtrackerapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|solutionrelative:controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|d:\\nwtrackerapi\\nwtrackerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|d:\\nwtrackerapi\\nwtrackerapi\\data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|solutionrelative:data\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|d:\\nwtrackerapi\\nwtrackerapi\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|solutionrelative:models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\NWTrackerAPI\\NWTrackerAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\NWTrackerAPI\\NWTrackerAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T00:18:26.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "APIContext.cs",
+              "DocumentMoniker": "D:\\NWTrackerAPI\\NWTrackerAPI\\Data\\APIContext.cs",
+              "RelativeDocumentMoniker": "Data\\APIContext.cs",
+              "ToolTip": "D:\\NWTrackerAPI\\NWTrackerAPI\\Data\\APIContext.cs",
+              "RelativeToolTip": "Data\\APIContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T00:14:11.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "D:\\NWTrackerAPI\\NWTrackerAPI\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectController.cs",
+              "ToolTip": "D:\\NWTrackerAPI\\NWTrackerAPI\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "Controllers\\ProjectController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T00:10:55.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Project.cs",
+              "DocumentMoniker": "D:\\NWTrackerAPI\\NWTrackerAPI\\Models\\Project.cs",
+              "RelativeDocumentMoniker": "Models\\Project.cs",
+              "ToolTip": "D:\\NWTrackerAPI\\NWTrackerAPI\\Models\\Project.cs",
+              "RelativeToolTip": "Models\\Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T00:09:21.673Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
