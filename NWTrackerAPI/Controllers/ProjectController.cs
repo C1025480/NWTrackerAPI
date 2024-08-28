@@ -27,18 +27,22 @@ namespace NWTrackerAPI.Controllers
         }
         [HttpPost]
         [Route("/NewProject")]
-        public JsonResult NewProject(string inputtedProjectName)
+        public IActionResult NewProject([FromBody] Project inputtedProjectName)
         {
+            if (inputtedProjectName == null || string.IsNullOrWhiteSpace(inputtedProjectName.ProjectName))
+            {
+                return BadRequest("Project name is required.");
+            }
+
             var new_project = new Project()
             {
-                ProjectName = inputtedProjectName
+                ProjectName = inputtedProjectName.ProjectName
             };
 
             context.Projects.Add(new_project);
-
             context.SaveChanges();
 
-            return new JsonResult(Ok(new_project) + " new project successfully added to database. ");
+            return Ok();
         }
     }
 }
