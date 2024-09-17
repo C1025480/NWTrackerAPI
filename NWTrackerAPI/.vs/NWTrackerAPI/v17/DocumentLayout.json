@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|d:\\nwtrackerapi\\nwtrackerapi\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|solutionrelative:controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|d:\\nwtrackerapi\\nwtrackerapi\\models\\trackerrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|solutionrelative:models\\trackerrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|d:\\nwtrackerapi\\nwtrackerapi\\models\\tt_tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49E445B3-D2EB-4437-A9BD-807EF1D643BF}|NWTrackerAPI.csproj|solutionrelative:models\\tt_tracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TT_TRACKER.cs",
+              "DocumentMoniker": "D:\\NWTrackerAPI\\NWTrackerAPI\\Models\\TT_TRACKER.cs",
+              "RelativeDocumentMoniker": "Models\\TT_TRACKER.cs",
+              "ToolTip": "D:\\NWTrackerAPI\\NWTrackerAPI\\Models\\TT_TRACKER.cs",
+              "RelativeToolTip": "Models\\TT_TRACKER.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T19:25:02.435Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,9 +45,22 @@
               "RelativeDocumentMoniker": "Controllers\\ProjectController.cs",
               "ToolTip": "D:\\NWTrackerAPI\\NWTrackerAPI\\Controllers\\ProjectController.cs",
               "RelativeToolTip": "Controllers\\ProjectController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAmwCgAAAAAAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAwwEoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T00:10:55.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrackerRecord.cs",
+              "DocumentMoniker": "D:\\NWTrackerAPI\\NWTrackerAPI\\Models\\TrackerRecord.cs",
+              "RelativeDocumentMoniker": "Models\\TrackerRecord.cs",
+              "ToolTip": "D:\\NWTrackerAPI\\NWTrackerAPI\\Models\\TrackerRecord.cs",
+              "RelativeToolTip": "Models\\TrackerRecord.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T19:27:49.621Z",
               "EditorCaption": ""
             }
           ]

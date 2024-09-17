@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NWTrackerAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16ed970ffaba5fc37dba8dfee5f74fb3ffdbefbd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a383b4b5865ec508c5cd1eb403cca26b830a306")]
 [assembly: System.Reflection.AssemblyProductAttribute("NWTrackerAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NWTrackerAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
