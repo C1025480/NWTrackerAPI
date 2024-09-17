@@ -132,7 +132,7 @@ namespace NWTrackerAPI.Controllers
             }
             else
             {
-                return NotFound($"Tracker record with TT_PK {UpdatedTrackerRecord.TT_PK} not found.");
+                return NotFound($"Tracker record with TT_PK {UpdatedTrackerRecord.TT_PK} not found");
             }
         }
     }
