@@ -56,17 +56,21 @@ namespace NWTrackerAPI.Controllers
         public IActionResult GetTrackerRecords(int ProjectPk)
         {
             var result = context.TT_TRACKER
-                .Where(tt => tt.TT_NW_FK == ProjectPk)
-                .Select(tt => new TrackerRecord
-                {
+        .Where(tt => tt.TT_NW_FK == ProjectPk)
+        .Join(
+            context.SS_SUPPORT_STATUS,
+            tt => tt.TT_STATUS,
+            ss => ss.SS_PK,
+            (tt, ss) => new TrackerRecord
+            {
                 TT_PK = tt.TT_PK,
-                TT_NW_FK = tt.TT_NW_FK, 
+                TT_NW_FK = tt.TT_NW_FK,
                 TT_UPRN = tt.TT_UPRN,
-                TT_STATUS = tt.TT_STATUS,
+                TT_STATUS = ss.SS_Category_Name,
                 TT_HOUSE_NUMBER = tt.TT_HOUSE_NUMBER,
-                TT_STREET = tt.TT_STREET,
-                })
-            .ToList();
+                TT_STREET = tt.TT_STREET
+            })
+        .ToList();
 
             return new JsonResult(Ok(result));
         }
