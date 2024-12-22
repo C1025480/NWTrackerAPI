@@ -21,7 +21,9 @@ namespace NWTrackerAPI.Controllers
         [Route("/GetProjects")]
         public JsonResult GetProjects()
         {
-           var result = context.Projects.ToList();
+           var result = context.Projects
+                .OrderByDescending(x => x.NW_PK)
+                .ToList();
 
             return new JsonResult(Ok(result));
         }
@@ -70,6 +72,7 @@ namespace NWTrackerAPI.Controllers
                 TT_HOUSE_NUMBER = tt.TT_HOUSE_NUMBER,
                 TT_STREET = tt.TT_STREET
             })
+        .OrderByDescending(x => x.TT_PK)
         .ToList();
 
             return new JsonResult(Ok(result));
@@ -78,11 +81,16 @@ namespace NWTrackerAPI.Controllers
         [Route("/GetTrackerRecord")]
         public JsonResult GetTrackerRecord(int TrackerRecordPK)
         {
-            var result = context.TT_TRACKER
-                .Where(tt => tt.TT_PK ==TrackerRecordPK)
-                .ToList();
+            var trackerRecord = context.TT_TRACKER.FirstOrDefault(tt => tt.TT_PK == TrackerRecordPK);
 
-            return new JsonResult(Ok(result));
+            if (trackerRecord != null)
+            {
+                return new JsonResult(trackerRecord);
+            }
+            else
+            {
+                return null;
+            }
         }
         [HttpPost]
         [Route("/UpdateTrackerRecord")]
