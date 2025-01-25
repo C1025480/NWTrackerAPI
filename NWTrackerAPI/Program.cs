@@ -1,15 +1,19 @@
 using Microsoft.EntityFrameworkCore;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using NWTrackerAPI.Data;
 using System;
+using NWTrackerAPI.Processors;
+using NWTrackerAPI.Processors.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Register services with the default DI container
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configure DbContext
 builder.Services.AddDbContext<APIContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), sqlOptions =>
     {
@@ -22,15 +26,29 @@ builder.Services.AddDbContext<APIContext>(opt =>
 // Configure CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllOrigins",
-        policy => policy
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());
+    options.AddPolicy("AllowAllOrigins", policy =>
+    {
+        policy.AllowAnyOrigin() // Allow all origins
+              .AllowAnyMethod()  // Allow any HTTP method (GET, POST, etc.)
+              .AllowAnyHeader(); // Allow any headers
+    });
 });
 
-var app = builder.Build();
 
+// **Configure Autofac as the DI container**
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+    .ConfigureContainer<ContainerBuilder>(containerBuilder =>
+    {
+        // Get all the types from the assembly where your interfaces and implementations reside
+        var assembly = typeof(ICreateProject).Assembly; // Assuming your interfaces are in the same assembly
+
+        // Register types dynamically by scanning the assembly
+        containerBuilder.RegisterAssemblyTypes(assembly)
+            .Where(t => t.IsClass && !t.IsAbstract) // Only consider concrete classes
+            .AsImplementedInterfaces(); // Automatically register all interfaces the class implements
+    });
+
+var app = builder.Build();
 app.UseCors("AllowAllOrigins");
 
 // Configure the HTTP request pipeline.
@@ -44,7 +62,6 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
-// Use CORS policy
 app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthorization();
