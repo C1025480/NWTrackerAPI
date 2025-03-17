@@ -45,15 +45,17 @@ namespace NWTrackerAPI.Controllers
 
         [HttpPost]
         [Route("/UserLogin")]
-        public IActionResult UserLogin(string username, string password)
+        public IActionResult UserLogin([FromBody] LoginModel login)
         {
-            LOG_LOGIN User = getUser.Validate(context, username, password);
+            LOG_LOGIN User = getUser.Validate(context, login.username, login.password);
 
             if (User == null) {
                 return Unauthorized(new { message = "Invalid credentials" });
             }
             else
             {
+                User.LOG_HASHED_PASSWORD = null;
+                User.LOG_SALT = null;
                 return Ok(new
                 {
                     message = "Login successful",

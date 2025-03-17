@@ -15,7 +15,7 @@ namespace NWTrackerAPI.Models
         public string LOG_EMAILADDRESS { get; set; }
         public string LOG_PHONENUMBER { get; set; }
         public string LOG_USERNAME { get; set; }
-        public string LOG_HASHED_PASSWORD { get; set; }
+        public string? LOG_HASHED_PASSWORD { get; set; }
         public string? LOG_SALT { get; set; }
 
     }
