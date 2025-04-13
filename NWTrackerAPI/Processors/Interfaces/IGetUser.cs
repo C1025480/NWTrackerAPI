@@ -6,5 +6,6 @@ namespace NWTrackerAPI.Processors.Interfaces
     public interface IGetUser
     {
         LOG_LOGIN Validate(APIContext context, string username, string password);
+        LOG_LOGIN GetUserFromLogId(APIContext context, int LogID);
     }
 }

@@ -5,15 +5,14 @@ using NWTrackerAPI.Data;
 using System;
 using NWTrackerAPI.Processors;
 using NWTrackerAPI.Processors.Interfaces;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Register services with the default DI container
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configure DbContext
 builder.Services.AddDbContext<APIContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), sqlOptions =>
     {
@@ -23,35 +22,30 @@ builder.Services.AddDbContext<APIContext>(opt =>
             errorNumbersToAdd: null);
     }));
 
-// Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins", policy =>
     {
-        policy.AllowAnyOrigin() // Allow all origins
-              .AllowAnyMethod()  // Allow any HTTP method (GET, POST, etc.)
-              .AllowAnyHeader(); // Allow any headers
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
     });
 });
 
 
-// **Configure Autofac as the DI container**
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
     .ConfigureContainer<ContainerBuilder>(containerBuilder =>
     {
-        // Get all the types from the assembly where your interfaces and implementations reside
-        var assembly = typeof(ICreateProject).Assembly; // Assuming your interfaces are in the same assembly
+        var assembly = Assembly.GetExecutingAssembly();
 
-        // Register types dynamically by scanning the assembly
         containerBuilder.RegisterAssemblyTypes(assembly)
-            .Where(t => t.IsClass && !t.IsAbstract) // Only consider concrete classes
-            .AsImplementedInterfaces(); // Automatically register all interfaces the class implements
+            .Where(t => t.IsClass && !t.IsAbstract)
+            .AsImplementedInterfaces();
     });
 
 var app = builder.Build();
 app.UseCors("AllowAllOrigins");
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

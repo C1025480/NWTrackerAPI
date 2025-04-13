@@ -35,7 +35,7 @@ namespace NWTrackerAPI.Controllers
                  .OrderByDescending(x => x.NW_PK)
                  .ToList();
 
-            return new JsonResult(Ok(result));
+            return new JsonResult(result);
         }
         [HttpPost]
         [Route("/NewProject")]

@@ -4,6 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace NWTrackerAPI.Models
 {
+    [ExcludeFromCodeCoverage]
     public class TrackerRecord
     {
         public int TT_PK { get; set; }

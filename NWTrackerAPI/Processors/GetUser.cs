@@ -42,5 +42,20 @@ namespace NWTrackerAPI.Processors
                 return null;
             }
         }
+
+        public LOG_LOGIN GetUserFromLogId(APIContext context, int LogID )
+        {
+            LOG_LOGIN User = context.LOG_LOGINS.FirstOrDefault(x => x.LOG_ID == LogID);
+
+            if (User != null)
+            {
+                return User;
+            }
+            else
+            {
+                Console.WriteLine("Couldn't find user associated with username");
+                return null;
+            }
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace NWTrackerAPI.Models
 {
+    [ExcludeFromCodeCoverage]
     [Table("LOG_LOGINS")]
     public class LOG_LOGIN
     {

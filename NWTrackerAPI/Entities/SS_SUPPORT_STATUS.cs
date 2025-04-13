@@ -5,6 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace NWTrackerAPI.Models
 {
+    [ExcludeFromCodeCoverage]
     public class SS_SUPPORT_STATUS
     {
         [Key]
